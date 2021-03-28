@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
         --background: #f0f2f5;
         --red: #e52e4d;
         --blue: #5429cc;
+        --green: #33CC95;
 
         --blue-light: #6933ff;
 
@@ -32,10 +33,12 @@ export const GlobalStyle = createGlobalStyle`
         @media (max-width: 720PX) {
             font-size: 30%;
         }
+
     }
 
     body {
-        background: var(--background)
+        background: var(--background);
+        font-size: 1.6rem
     }
 
     body, button, input, textarea {
