@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { createServer, Model } from 'miragejs'
 
-
 createServer({
 
   models: {
@@ -27,7 +26,7 @@ createServer({
           type: 'withdraw',
           category: 'Casa',
           amount: 1100,
-          createdAt: new Date('2021-03-12 1:00:00')
+          createdAt: new Date('2021-03-12 11:00:00')
         }
       ]
     });
@@ -41,13 +40,12 @@ createServer({
     })
 
     this.post('/transactions', (schema, request) => {
-      const transaction = JSON.parse(request.requestBody);
+      const data = JSON.parse(request.requestBody);
 
-      return schema.create('transaction', transaction)
+      return schema.create('transaction', data)
     })
   }
 })
-
 
 ReactDOM.render(
   <React.StrictMode>

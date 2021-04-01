@@ -5,6 +5,7 @@ import { Header } from './components/Header';
 import { NewTransactionModal } from './components/NewTransactionModal'
 
 import { GlobalStyle } from './styles/GlobalStyle';
+import { TransactionProvider } from './TransactionContext';
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
   }
 
   return (
-    <>
+    <TransactionProvider>
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
 
       <Dashboard />
@@ -30,7 +31,7 @@ function App() {
       />
 
       <GlobalStyle />
-    </>
+    </TransactionProvider>
   );
 }
 
